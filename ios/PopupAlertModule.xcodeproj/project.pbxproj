@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6F91D097A818F4E925B7DACF /* Pods_PopupAlertModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 581C594EA6C4DC2BBB57476B /* Pods_PopupAlertModule.framework */; };
 		FA4F9FE82512AA42002DB4D5 /* PopupAlertModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4F9FE72512AA42002DB4D5 /* PopupAlertModule.swift */; };
 		FA4F9FEB2512ACC2002DB4D5 /* PopupAlertModule.m in Sources */ = {isa = PBXBuildFile; fileRef = FA4F9FEA2512ACC2002DB4D5 /* PopupAlertModule.m */; };
 /* End PBXBuildFile section */
@@ -24,6 +25,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0F22D7E18CB46B6AA3069377 /* Pods-PopupAlertModule.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PopupAlertModule.debug.xcconfig"; path = "Target Support Files/Pods-PopupAlertModule/Pods-PopupAlertModule.debug.xcconfig"; sourceTree = "<group>"; };
+		581C594EA6C4DC2BBB57476B /* Pods_PopupAlertModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PopupAlertModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		96A48581AF0FE23D09B29CCD /* Pods-PopupAlertModule.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PopupAlertModule.release.xcconfig"; path = "Target Support Files/Pods-PopupAlertModule/Pods-PopupAlertModule.release.xcconfig"; sourceTree = "<group>"; };
 		FA0EFF60236CC8FB00069FA8 /* libPopupAlertModule.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPopupAlertModule.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA4F9FE62512AA41002DB4D5 /* PopupAlertModule-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PopupAlertModule-Bridging-Header.h"; sourceTree = "<group>"; };
 		FA4F9FE72512AA42002DB4D5 /* PopupAlertModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupAlertModule.swift; sourceTree = "<group>"; };
@@ -35,12 +39,31 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F91D097A818F4E925B7DACF /* Pods_PopupAlertModule.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		396339078281142542C6B3F6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				581C594EA6C4DC2BBB57476B /* Pods_PopupAlertModule.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		54114D9D1E882F83AEC4033B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0F22D7E18CB46B6AA3069377 /* Pods-PopupAlertModule.debug.xcconfig */,
+				96A48581AF0FE23D09B29CCD /* Pods-PopupAlertModule.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		FA0EFF57236CC8FB00069FA8 = {
 			isa = PBXGroup;
 			children = (
@@ -48,6 +71,8 @@
 				FA4F9FEA2512ACC2002DB4D5 /* PopupAlertModule.m */,
 				FA4F9FE72512AA42002DB4D5 /* PopupAlertModule.swift */,
 				FA0EFF61236CC8FB00069FA8 /* Products */,
+				54114D9D1E882F83AEC4033B /* Pods */,
+				396339078281142542C6B3F6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -66,6 +91,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FA0EFF69236CC8FB00069FA8 /* Build configuration list for PBXNativeTarget "PopupAlertModule" */;
 			buildPhases = (
+				466DFED7955CFE1E0F690055 /* [CP] Check Pods Manifest.lock */,
 				FA0EFF5C236CC8FB00069FA8 /* Sources */,
 				FA0EFF5D236CC8FB00069FA8 /* Frameworks */,
 				FA0EFF5E236CC8FB00069FA8 /* CopyFiles */,
@@ -111,6 +137,31 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		466DFED7955CFE1E0F690055 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PopupAlertModule-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FA0EFF5C236CC8FB00069FA8 /* Sources */ = {
@@ -240,6 +291,7 @@
 		};
 		FA0EFF6A236CC8FB00069FA8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0F22D7E18CB46B6AA3069377 /* Pods-PopupAlertModule.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -265,6 +317,7 @@
 		};
 		FA0EFF6B236CC8FB00069FA8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 96A48581AF0FE23D09B29CCD /* Pods-PopupAlertModule.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
