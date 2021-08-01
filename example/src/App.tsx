@@ -1,12 +1,25 @@
 import React, { useEffect } from 'react'
-import PopupAlertModule, { Counter } from 'react-native-popup-alert'
+import { PopupAlert, showPopup } from 'react-native-popup-alert'
 
 const App = () => {
   useEffect(() => {
-    console.log(PopupAlertModule)
-  })
+    showPopup({
+      type: 'success',
+      autoDismiss: false,
+      title: 'Custom Alert',
+      body: 'This is a custom alert for testing the Alert component',
+      buttons: [
+        {
+          name: 'Okay',
+          onPress: () => {
+            showPopup(null)
+          },
+        },
+      ],
+    })
+  }, [])
 
-  return <Counter />
+  return <PopupAlert />
 }
 
 export default App
