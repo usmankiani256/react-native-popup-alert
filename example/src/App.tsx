@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react'
-import RNModuleTemplateModule, { Counter } from 'react-native-module-template'
+import PopupAlertModule, { Counter } from 'react-native-popup-alert'
 
 const App = () => {
   useEffect(() => {
-    console.log(RNModuleTemplateModule)
+    console.log(PopupAlertModule)
   })
 
   return <Counter />
