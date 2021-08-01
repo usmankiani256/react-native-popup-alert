@@ -1,26 +1,17 @@
 import * as React from 'react'
-import { Button, NativeModules, StyleSheet, Text, View } from 'react-native'
+import Alert, { showPopup } from './components/PopupAlert/index.js'
+import { Provider } from 'react-redux'
+import { Provider as PaperProvider } from 'react-native-paper'
+import store from './store'
 
-export const addOne = (input: number) => input + 1
-
-export const Counter = () => {
-  const [count, setCount] = React.useState(0)
-
+const PopupAlert = () => {
   return (
-    <View style={styles.container}>
-      <Text>You pressed {count} times</Text>
-      <Button onPress={() => setCount(addOne(count))} title='Press Me' />
-    </View>
+    <Provider store={store}>
+      <PaperProvider>
+        <Alert />
+      </PaperProvider>
+    </Provider>
   )
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-    height: 200,
-  },
-})
-
-export default NativeModules.PopupAlertModule
+export { PopupAlert, showPopup }
