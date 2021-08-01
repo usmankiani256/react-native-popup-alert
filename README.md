@@ -1,7 +1,7 @@
- # react-native-popup-alert
+# react-native-popup-alert
 
- ## Installation
+## Installation
 
- ```
- yarn add react-native-popup-alert
- ```
+```
+yarn add react-native-popup-alert
+```
