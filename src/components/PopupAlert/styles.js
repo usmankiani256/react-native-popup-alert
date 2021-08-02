@@ -26,7 +26,7 @@ const styles = {
   },
   theme: {
     colors: {
-      primary: '#777777',
+      primary: '#7777',
     },
   },
 }

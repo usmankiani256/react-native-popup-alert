@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { Button, Dialog, Portal } from 'react-native-paper'
-import { View, Text } from 'react-native'
+import { View, Text, ScrollView } from 'react-native'
 import { useSelector, useDispatch } from 'react-redux'
 import showAlert from '../../store/Actions/ShowAlert'
 import LottieView from 'lottie-react-native'
@@ -33,7 +33,7 @@ const Alert = (props) => {
 
   let isSuccess = alert?.type === 'success'
   let isError = alert?.type === 'error'
-  let isOops = alert?.type === 'oops'
+  let isUnexpected = alert?.type === 'unexpected'
 
   useEffect(() => {
     emitter.on('Show_Alert_Fired', function (payload) {
@@ -60,44 +60,50 @@ const Alert = (props) => {
       <Portal>
         <Dialog style={styles.root} visible onDismiss={hideDialog}>
           <Dialog.Title>{alert.title}</Dialog.Title>
-          <View style={styles.content}>
-            {/* {(isSuccess || isError || isOops) && (
-              <LottieView
-                loop={isOops}
-                autoPlay={true}
-                style={{
-                  ...styles.animation,
-                  height: isOops ? 150 : 80,
-                  width: isOops ? 150 : 80,
-                  marginBottom: isOops ? 0 : 25,
-                  marginTop: isOops ? -5 : 0,
-                }}
-                source={
-                  isSuccess
-                    ? require('../../images/success.json')
-                    : isError
-                    ? require('../../images/error.json')
-                    : require('../../images/oops.json')
-                }
-              />
-            )} */}
-            <Text style={styles.body}>{alert.body}</Text>
-          </View>
-          <Dialog.Actions>
-            {alert.buttons.map(({ name, onPress }, index) => {
-              let len = alert.buttons.length
+          <ScrollView>
+            <View style={styles.content}>
+              {(isSuccess || isError || isUnexpected) && (
+                <LottieView
+                  loop={isUnexpected}
+                  autoPlay={true}
+                  style={{
+                    ...styles.animation,
+                    height: isUnexpected ? 150 : 80,
+                    width: isUnexpected ? 150 : 80,
+                    marginBottom: isUnexpected ? 0 : 25,
+                    marginTop: isUnexpected ? -5 : 0,
+                  }}
+                  source={
+                    isSuccess
+                      ? require('../../images/success.json')
+                      : isError
+                      ? require('../../images/error.json')
+                      : require('../../images/unexpected.json')
+                  }
+                />
+              )}
+              <Text style={styles.body}>{alert.body}</Text>
+            </View>
+            {alert.buttons && (
+              <Dialog.Actions>
+                {alert.buttons.map(({ name, onPress }, index) => {
+                  let len = alert.buttons.length
 
-              return (
-                <Button
-                  theme={index === len - 1 ? styles.themePrimary : styles.theme}
-                  key={index}
-                  onPress={onPress}
-                >
-                  {name}
-                </Button>
-              )
-            })}
-          </Dialog.Actions>
+                  return (
+                    <Button
+                      theme={
+                        index === len - 1 ? styles.themePrimary : styles.theme
+                      }
+                      key={index}
+                      onPress={onPress}
+                    >
+                      {name}
+                    </Button>
+                  )
+                })}
+              </Dialog.Actions>
+            )}
+          </ScrollView>
         </Dialog>
       </Portal>
     )
