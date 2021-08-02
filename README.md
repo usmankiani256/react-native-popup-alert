@@ -18,7 +18,7 @@ npm i --save react-native-popup-alert
 
 ## Usage
 
-```
+```js
 import React, { useEffect } from 'react'
 import { PopupAlert, showPopup } from 'react-native-popup-alert'
 
