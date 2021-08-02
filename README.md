@@ -2,6 +2,8 @@
 
 This is a custom component for React Native, a simple popup alert, compatible with ios and android.
 
+---
+
 ## Installation
 
 #### yarn
@@ -15,6 +17,8 @@ yarn add react-native-popup-alert
 ```
 npm i --save react-native-popup-alert
 ```
+
+---
 
 ## Usage
 
@@ -65,6 +69,7 @@ export default App
 ## Contributing
 
 ## Credits -->
+---
 
 ## License
 
