@@ -45,10 +45,10 @@ const App = () => {
 
 export default App
 ```
-
+<!-- 
 ## Contributing
 
-## Credits
+## Credits -->
 
 ## License
 
