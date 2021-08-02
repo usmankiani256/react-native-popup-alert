@@ -45,7 +45,23 @@ const App = () => {
 
 export default App
 ```
-<!-- 
+
+### PopupAlert
+
+<!-- Description here -->
+
+### showPopup
+
+<!-- Description here -->
+<!-- Params here eg type, autoDismiss etc -->
+
+#### params
+
+| Param       | Type    | Description                                           | Default |
+| :---------- | :------ | :---------------------------------------------------- | :------ |
+| autoDismiss | Boolean | Popup will be automatically dismissed after 6 seconds | false   |
+
+<!--
 ## Contributing
 
 ## Credits -->
