@@ -82,6 +82,20 @@ The Alert component that displays the Alert
 
 ## Credits -->
 
+## Screenshots
+
+##### Success
+
+![success](/images/screenshots/success_alert.png)
+
+##### Error
+
+![error](/images/screenshots/error_alert.png)
+
+##### Unexpected
+
+![unexpected](/images/screenshots/unexpected_alert.png)
+
 ## License
 
 MIT License
