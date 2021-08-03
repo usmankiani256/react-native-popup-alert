@@ -2,8 +2,6 @@
 
 This is a custom component for React Native, a simple popup alert, compatible with ios and android.
 
----
-
 ## Installation
 
 #### yarn
@@ -17,8 +15,6 @@ yarn add react-native-popup-alert
 ```
 npm i --save react-native-popup-alert
 ```
-
----
 
 ## Usage
 
@@ -61,15 +57,18 @@ export default App
 
 #### params
 
-| Param       | Type    | Description                                           | Default |
-| :---------- | :------ | :---------------------------------------------------- | :------ |
-| autoDismiss | Boolean | Popup will be automatically dismissed after 6 seconds | false   |
+| Param       | Type    | Description                                                                                                                                                        | Default                              |
+| :---------- | :------ | :----------------------------------------------------------------------------------------------------------------------------------------------------------------- | :----------------------------------- |
+| autoDismiss | Boolean | If `true` Alert will be dismissed after 6 seconds.                                                                                                                 | `false`                              |
+| showAlert   | Func    | The actual function used to call the popup component                                                                                                               | -                                    |
+| title       | String  | The Title of the popup alert component                                                                                                                             | "Alert"                              |
+| body        | String  | The body of the popup alert component                                                                                                                              | "This is a custom alert description" |
+| buttons     | Array   | An array of buttons passed to the component, the button object passed has the following props: > label - The label of the button, > onPress - The onPress Callback | -                                    |
 
 <!--
 ## Contributing
 
 ## Credits -->
----
 
 ## License
 
