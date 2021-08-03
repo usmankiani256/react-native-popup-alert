@@ -50,7 +50,7 @@ export default App
 
 The Alert component that displays the Alert
 
-> recommended to use in initial screen
+> :warning: recommended to use in initial screen
 
 ### showPopup
 
