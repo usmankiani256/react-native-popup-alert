@@ -16,6 +16,12 @@ yarn add react-native-popup-alert
 npm i --save react-native-popup-alert
 ```
 
+#### directly from github
+
+```
+npm i https://github.com/usmankiani256/react-native-popup-alert
+```
+
 ## Usage
 
 ```js
