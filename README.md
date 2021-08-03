@@ -7,19 +7,13 @@ This is a custom component for React Native, a simple popup alert, compatible wi
 #### yarn
 
 ```
-yarn add react-native-popup-alert
+yarn add https://github.com/usmankiani256/react-native-popup-alert
 ```
 
 #### npm
 
 ```
-npm i --save react-native-popup-alert
-```
-
-#### directly from github
-
-```
-npm i https://github.com/usmankiani256/react-native-popup-alert
+npm i --save https://github.com/usmankiani256/react-native-popup-alert
 ```
 
 ## Usage
