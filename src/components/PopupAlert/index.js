@@ -55,6 +55,9 @@ const Alert = (props) => {
   }
 
   if (alert) {
+    let title = alert.title || 'Custom Alert'
+    let body = alert.body || 'This is a custom alert description'
+
     return (
       <Portal>
         <Dialog
@@ -63,7 +66,7 @@ const Alert = (props) => {
           visible
           onDismiss={hideDialog}
         >
-          <Dialog.Title>{alert.title}</Dialog.Title>
+          <Dialog.Title>{title}</Dialog.Title>
           <ScrollView>
             <View style={styles.content}>
               {(isSuccess || isError || isUnexpected) && (
@@ -84,7 +87,7 @@ const Alert = (props) => {
                   }
                 />
               )}
-              <Text style={styles.body}>{alert.body}</Text>
+              <Text style={styles.body}>{body}</Text>
             </View>
             {alert.buttons && (
               <Dialog.Actions>
