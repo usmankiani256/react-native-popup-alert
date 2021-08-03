@@ -1,9 +1,8 @@
 import React, { useEffect } from 'react'
 import { Button, Dialog, Portal } from 'react-native-paper'
-import { View, Text, ScrollView } from 'react-native'
+import { View, Text, ScrollView, Image } from 'react-native'
 import { useSelector, useDispatch } from 'react-redux'
 import showAlert from '../../store/Actions/ShowAlert'
-import LottieView from 'lottie-react-native'
 import styles from './styles'
 
 var emitter = require('tiny-emitter/instance')
@@ -58,14 +57,17 @@ const Alert = (props) => {
   if (alert) {
     return (
       <Portal>
-        <Dialog style={styles.root} visible onDismiss={hideDialog}>
+        <Dialog
+          dismissable={false}
+          style={styles.root}
+          visible
+          onDismiss={hideDialog}
+        >
           <Dialog.Title>{alert.title}</Dialog.Title>
           <ScrollView>
             <View style={styles.content}>
               {(isSuccess || isError || isUnexpected) && (
-                <LottieView
-                  loop={isUnexpected}
-                  autoPlay={true}
+                <Image
                   style={{
                     ...styles.animation,
                     height: isUnexpected ? 150 : 80,
@@ -75,10 +77,10 @@ const Alert = (props) => {
                   }}
                   source={
                     isSuccess
-                      ? require('../../images/success.json')
+                      ? require('../../images/success.png')
                       : isError
-                      ? require('../../images/error.json')
-                      : require('../../images/unexpected.json')
+                      ? require('../../images/error.png')
+                      : require('../../images/unexpected.png')
                   }
                 />
               )}
