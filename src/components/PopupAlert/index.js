@@ -80,10 +80,10 @@ const Alert = (props) => {
                   }}
                   source={
                     isSuccess
-                      ? require('../../images/success.png')
+                      ? require('../../../src/images/success.png')
                       : isError
-                      ? require('../../images/error.png')
-                      : require('../../images/unexpected.png')
+                      ? require('../../../src/images/error.png')
+                      : require('../../../src/images/unexpected.png')
                   }
                 />
               )}
