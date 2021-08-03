@@ -48,12 +48,11 @@ export default App
 
 ### PopupAlert
 
-<!-- Description here -->
+The Alert component that displays the Alert
+
+> recommended to use in initial screen
 
 ### showPopup
-
-<!-- Description here -->
-<!-- Params here eg type, autoDismiss etc -->
 
 #### params
 
