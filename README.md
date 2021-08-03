@@ -90,7 +90,7 @@ The Alert component that displays the Alert
 
 ##### Error
 
-![error](REACT-NATIVE-POPUP-ALERT/src/images/screenshots/error_alert.png)
+![error](file:///Users/headshot/Desktop/Open-Source/react-native-popup-alert/src/screenshots/error_alert.png)
 
 ##### Unexpected
 
