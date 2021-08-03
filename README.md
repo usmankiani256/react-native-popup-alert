@@ -86,15 +86,15 @@ The Alert component that displays the Alert
 
 ##### Success
 
-![success](./src/images/screenshots/success_alert.png)
+![success](./src/screenshots/success_alert.png)
 
 ##### Error
 
-![error](./src/images/screenshots/error_alert.png)
+![error](./src/screenshots/error_alert.png)
 
 ##### Unexpected
 
-![unexpected](./src/images/screenshots/unexpected_alert.png)
+![unexpected](./src/screenshots/unexpected_alert.png)
 
 ## License
 
