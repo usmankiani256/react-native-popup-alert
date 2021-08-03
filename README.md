@@ -84,17 +84,9 @@ The Alert component that displays the Alert
 
 ## Screenshots
 
-##### Success
-
-![success](./src/screenshots/success_alert.png)
-
-##### Error
-
-![error](./src/screenshots/error_alert.png)
-
-##### Unexpected
-
-![unexpected](./src/screenshots/unexpected_alert.png)
+|                     Success                     |                    Error                    |                      Unexpected                       |
+| :---------------------------------------------: | :-----------------------------------------: | :---------------------------------------------------: |
+| ![success](./src/screenshots/success_alert.png) | ![error](./src/screenshots/error_alert.png) | ![unexpected](./src/screenshots/unexpected_alert.png) |
 
 ## License
 
