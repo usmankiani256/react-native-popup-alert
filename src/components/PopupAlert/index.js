@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import * as React from 'react'
 import { Button, Dialog, Portal } from 'react-native-paper'
 import { View, Text, ScrollView, Image } from 'react-native'
 import { useSelector, useDispatch } from 'react-redux'
@@ -34,13 +34,13 @@ const Alert = (props) => {
   let isError = alert?.type === 'error'
   let isUnexpected = alert?.type === 'unexpected'
 
-  useEffect(() => {
+  React.useEffect(() => {
     emitter.on('Show_Alert_Fired', function (payload) {
       dispatch(showAlert(payload))
     })
   }, [])
 
-  useEffect(() => {
+  React.useEffect(() => {
     if (alert && alert.autoDismiss) {
       console.debug('Auto Dismiss after 6 seconds.')
       setTimeout(() => {
