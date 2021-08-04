@@ -3,6 +3,7 @@ import { Button, Dialog, Portal } from 'react-native-paper'
 import { View, Text, ScrollView, Image } from 'react-native'
 import { useSelector, useDispatch } from 'react-redux'
 import showAlert from '../../store/Actions/ShowAlert'
+import LottieView from 'lottie-react-native'
 import styles from './styles'
 
 var emitter = require('tiny-emitter/instance')
@@ -70,7 +71,9 @@ const Alert = (props) => {
           <ScrollView>
             <View style={styles.content}>
               {(isSuccess || isError || isUnexpected) && (
-                <Image
+                <LottieView
+                  loop={isUnexpected}
+                  autoPlay={true}
                   style={{
                     ...styles.animation,
                     height: isUnexpected ? 150 : 80,
@@ -80,10 +83,10 @@ const Alert = (props) => {
                   }}
                   source={
                     isSuccess
-                      ? require('../../../src/images/success.png')
+                      ? require('../../../src/images/success.json')
                       : isError
-                      ? require('../../../src/images/error.png')
-                      : require('../../../src/images/unexpected.png')
+                      ? require('../../../src/images/error.json')
+                      : require('../../../src/images/unexpected.json')
                   }
                 />
               )}
