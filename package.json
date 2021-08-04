@@ -64,6 +64,7 @@
     ]
   },
   "dependencies": {
+    "lottie-react-native": "^4.0.3",
     "react-native-paper": "^4.9.2",
     "react-redux": "^7.2.4",
     "redux": "^4.1.0",
