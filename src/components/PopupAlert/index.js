@@ -72,7 +72,7 @@ const Alert = (props) => {
             <View style={styles.content}>
               {(isSuccess || isError || isUnexpected) && (
                 <LottieView
-                  loop={isUnexpected}
+                  loop
                   autoPlay={true}
                   style={{
                     ...styles.animation,
