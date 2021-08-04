@@ -8,12 +8,18 @@ This is a custom component for React Native, a simple popup alert, compatible wi
 
 ```
 yarn add https://github.com/usmankiani256/react-native-popup-alert
+yarn add lottie-react-native
+yarn add lottie-ios
 ```
+
+or
 
 #### npm
 
 ```
 npm i --save https://github.com/usmankiani256/react-native-popup-alert
+npm i --save lottie-react-native
+npm i --save lottie-ios
 ```
 
 ## Usage
