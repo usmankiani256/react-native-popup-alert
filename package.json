@@ -61,7 +61,8 @@
       "jsx",
       "json",
       "node"
-    ]
+    ],
+    "transformIgnorePatterns": []
   },
   "dependencies": {
     "lottie-react-native": "^4.0.3",
