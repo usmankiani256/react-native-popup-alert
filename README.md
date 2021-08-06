@@ -8,8 +8,6 @@ This is a custom component for React Native, a simple popup alert, compatible wi
 
 ```
 yarn add https://github.com/usmankiani256/react-native-popup-alert
-yarn add lottie-react-native
-yarn add lottie-ios
 ```
 
 or
@@ -18,8 +16,6 @@ or
 
 ```
 npm i --save https://github.com/usmankiani256/react-native-popup-alert
-npm i --save lottie-react-native
-npm i --save lottie-ios
 ```
 
 ## Usage
@@ -32,14 +28,19 @@ const App = () => {
   // Call the PopupAlert Component on component mount
   useEffect(() => {
     showPopup({
-      type: 'unexpected',
-      autoDismiss: false,
-      title: 'Custom Alert',
-      body: 'This is a custom alert for testing the Alert component',
+      icon: 'alert-circle', // Icon name from Material Community Icons
+      iconSize: 70, // Size of the icon in pixels
+      iconColor: 'orange', // Color of the icon
+      autoDismiss: 5, // Automatically dismiss the alert after provided seconds
+      title: 'Custom Alert', // Title of the alert
+      body: 'This is a custom alert for testing the Alert component', // Body of the alert
       buttons: [
+        // Buttons for the alert
         {
           name: 'Okay',
-          onPress: () => showPopup(null),
+          onPress: () => {
+            showPopup(null)
+          },
         },
       ],
     })
@@ -62,13 +63,15 @@ The Alert component that displays the Alert
 
 #### params
 
-| Param       | Type    | Description                                                                                            | Default                              |
-| :---------- | :------ | :----------------------------------------------------------------------------------------------------- | :----------------------------------- |
-| autoDismiss | Boolean | If `true` Alert will be dismissed after 6 seconds.                                                     | `false`                              |
-| showAlert   | Func    | The actual function used to call the popup component                                                   | -                                    |
-| title       | String  | The Title of the popup alert component                                                                 | "Alert"                              |
-| body        | String  | The body of the popup alert component                                                                  | "This is a custom alert description" |
-| buttons     | Array   | An array of buttons objects passed to the component, the button object passed has the following props: | -                                    |
+| Param       | Type   | Description                                                                                            | Default                              |
+| :---------- | :----- | :----------------------------------------------------------------------------------------------------- | :----------------------------------- |
+| icon        | Button | Uses name from Material Community Icons, if icon name is not provided Alert will not display any icon. | "alert-circle"                       |
+| iconSize    | Number | It is the iconSize in pixels, if iconSize is not provided it will take 30 pixels by default.           | '30'                                 |
+| iconColor   | String | If color is not provided icon will display in grey color.                                              | 'grey'                               |
+| autoDismiss | Number | If number is provided Alert will be dismissed after the provided seconds.                              | -                                    |
+| title       | String | The Title of the popup alert component                                                                 | "Alert"                              |
+| body        | String | The body of the popup alert component                                                                  | "This is a custom alert description" |
+| buttons     | Array  | An array of buttons objects passed to the component, the button object passed has the following props: | -                                    |
 
 #### button object
 
@@ -82,11 +85,10 @@ The Alert component that displays the Alert
 
 ## Credits -->
 
-## Screenshots
+## Screenshot
 
-|                     Success                     |                    Error                    |                      Unexpected                       |
-| :---------------------------------------------: | :-----------------------------------------: | :---------------------------------------------------: |
-| ![success](./src/screenshots/success_alert.png) | ![error](./src/screenshots/error_alert.png) | ![unexpected](./src/screenshots/unexpected_alert.png) |
+| :---------------------------------------------: |
+| ![alert](./src/screenshots/alert.png) |
 
 ## License
 
