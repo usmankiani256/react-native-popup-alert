@@ -66,6 +66,7 @@
   },
   "dependencies": {
     "react-native-paper": "^4.9.2",
+    "react-native-vector-icons": "^8.1.0",
     "tiny-emitter": "^2.1.0"
   }
 }
