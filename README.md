@@ -66,8 +66,8 @@ The Alert component that displays the Alert
 | Param       | Type   | Description                                                                                            | Default                              |
 | :---------- | :----- | :----------------------------------------------------------------------------------------------------- | :----------------------------------- |
 | icon        | Button | Uses name from Material Community Icons, if icon name is not provided Alert will not display any icon. | "alert-circle"                       |
-| iconSize    | Number | It is the iconSize in pixels, if iconSize is not provided it will take 30 pixels by default.           | '30'                                 |
-| iconColor   | String | If color is not provided icon will display in grey color.                                              | 'grey'                               |
+| iconSize    | Number | It is the iconSize in pixels, if iconSize is not provided it will take default value of pixels.       | '30'                                 |
+| iconColor   | String | If color is not provided icon will display in default color.                                           | 'grey'                               |
 | autoDismiss | Number | If number is provided Alert will be dismissed after the provided seconds.                              | -                                    |
 | title       | String | The Title of the popup alert component                                                                 | "Alert"                              |
 | body        | String | The body of the popup alert component                                                                  | "This is a custom alert description" |
