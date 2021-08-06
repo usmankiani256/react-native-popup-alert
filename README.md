@@ -89,7 +89,7 @@ The Alert component that displays the Alert
 
 ## Screenshot
 
-<img style="float: center;" src="./src/screenshots/alert.png" height="500">
+<img src="./src/screenshots/alert.png" height="500">
 
 ## License
 
