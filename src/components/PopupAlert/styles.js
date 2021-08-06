@@ -14,6 +14,9 @@ const styles = {
     marginHorizontal: 25,
     marginBottom: 12,
   },
+  iconContainer: {
+    alignSelf: 'center',
+  },
   body: {
     fontSize: 17,
     lineHeight: 19,
