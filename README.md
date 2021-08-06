@@ -87,7 +87,6 @@ The Alert component that displays the Alert
 
 ## Screenshot
 
-| :---------------------------------------------: |
 | ![alert](./src/screenshots/alert.png) |
 
 ## License
