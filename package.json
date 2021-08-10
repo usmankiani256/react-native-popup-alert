@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "homepage": "https://github.com/usmankiani256/react-native-popup-alert",
-  "main": "src/index.tsx",
+  "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "author": "Muhammad Usman Kiani <usmankiani256@gmail.com>",
   "license": "MIT",
