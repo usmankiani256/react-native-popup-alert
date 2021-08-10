@@ -14,13 +14,13 @@ const App = () => {
         {
           name: 'Cancel',
           onPress: () => {
-            showPopup(null)
+            showPopup({})
           },
         },
         {
           name: 'Okay',
           onPress: () => {
-            showPopup(null)
+            showPopup({})
           },
         },
       ],
