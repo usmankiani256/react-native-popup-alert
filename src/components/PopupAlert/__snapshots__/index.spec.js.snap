@@ -1,0 +1,87 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PopupAlert /> should match snapshot: alert 1`] = `
+<withTheme(Portal)
+  testID="alert"
+>
+  <withTheme(Dialog)
+    dismissable={false}
+    style={
+      Object {
+        "alignSelf": "center",
+        "width": 637.5,
+      }
+    }
+    visible={true}
+  >
+    <withTheme(Dialog.Title)>
+      Custom Alert
+    </withTheme(Dialog.Title)>
+    <ScrollView>
+      <View
+        style={
+          Object {
+            "marginBottom": 12,
+            "marginHorizontal": 25,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignSelf": "center",
+            }
+          }
+        >
+          <withTheme(IconButton)
+            color="orange"
+            icon="alert-circle"
+            size={70}
+          />
+        </View>
+        <Text
+          style={
+            Object {
+              "fontSize": 17,
+              "lineHeight": 19,
+              "textAlign": "justify",
+            }
+          }
+        >
+          This is a custom alert for testing the Alert component
+        </Text>
+      </View>
+      <Dialog.Actions>
+        <withTheme(Button)
+          key="0"
+          onPress={[Function]}
+          theme={
+            Object {
+              "colors": Object {
+                "primary": "#7777",
+              },
+            }
+          }
+        >
+          Cancel
+        </withTheme(Button)>
+        <withTheme(Button)
+          key="1"
+          onPress={[Function]}
+          theme={
+            Object {
+              "colors": Object {
+                "primary": "#3f3f3f",
+              },
+            }
+          }
+        >
+          Okay
+        </withTheme(Button)>
+      </Dialog.Actions>
+    </ScrollView>
+  </withTheme(Dialog)>
+</withTheme(Portal)>
+`;
+
+exports[`<PopupAlert /> should match snapshot: null 1`] = `""`;
